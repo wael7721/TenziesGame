@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Tenzies Game - "Learn React"Capstone Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview:
+As part of the final project for the "Learn React" course, I created a **Tenzies game**, a popular dice game where the goal is to roll dice and keep as many as possible locked in place until all ten dice show the same number. The player rolls all the dice at once and tries to match the numbers with the goal of minimizing the number of rolls required to win.
 
-## Available Scripts
+In this project, I applied my knowledge of React to build an interactive, responsive, and fun game, featuring key concepts such as **state management**, **component structure**, and **event handling**. It also utilizes **React hooks** (like `useState` and `useEffect`) and **CSS for styling** to create a dynamic user experience.
 
-In the project directory, you can run:
+## Key Features:
+- **Interactive Dice Rolls**: The game consists of 10 dice, each represented by a die component. Players can click on each die to lock it in place, and they can continue rolling the unlocked dice to match the number of the locked dice.
+- **Game Logic**: The game automatically checks if all dice are the same, and when they are, it displays a win message. The player can reset the game to start over.
+- **State Management**: I used **React hooks** to manage the state of each die (locked/unlocked), the current values of the dice, and the number of rolls taken. The application updates efficiently when the state changes.
+- **Styling**: The game is styled using **CSS**, providing a clean and simple interface. Dice are styled as buttons, and the game has a modern look with visually appealing colors.
+- **Start New Game**: A button that allows players to restart the game with fresh dice.
 
-### `npm start`
+## Technologies Used:
+- **React**: Built the entire game using React functional components and hooks for state and effects.
+- **CSS**: Used plain CSS for styling the app and making it responsive.
+- **JavaScript**: Leveraged JavaScript for game logic and random dice generation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure:
+1. **App Component**: The main container that holds the game logic and renders the dice.
+2. **Die Component**: A single die that can be clicked to lock it in place or release it.
+3. **Game Logic**: Functions to roll dice, check for a win condition, and reset the game state.
+4. **Styling**: The project uses a responsive design with clear, minimalist styling focused on usability.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Play Tenzies:
+1. When the game starts, all dice are rolled and displayed randomly.
+2. Click on a die to lock it in place. The locked dice will not roll again in subsequent turns.
+3. Roll the unlocked dice until all dice display the same number.
+4. Once all dice match, the game is won! Click the "New Game" button to restart.
 
-### `npm test`
+## Challenges Faced:
+- Managing the state of each individual die and handling multiple rolls efficiently using React hooks.
+- Implementing the win condition logic and ensuring the game resets properly.
+- Ensuring that the app re-renders efficiently and optimally when game states change.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Future Improvements:
+- Add a timer to track how long it takes to complete the game.
+- Enhance the user interface with animations (e.g., dice rolling effect) using CSS transitions.
+- Implement local storage to save the game progress and allow players to continue where they left off.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## GitHub Repository Link:
+https://github.com/wael7721/TenziesGame
