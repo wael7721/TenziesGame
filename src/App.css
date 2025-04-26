@@ -1,0 +1,47 @@
+
+main{
+    background-color: #F5F5F5;
+    min-width: 400px;
+    min-height: 400px;
+    height: 90%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.dice-container{
+    height: 30%;
+    width: 60%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    align-items: center;
+    justify-items: center;
+}
+
+h1{
+    justify-self: start;
+}
+
+.dice-container *{
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.roll-dice{
+    background-color: #61dafb;
+    color: #0B2434;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.roll-dice:hover{
+    background-color: #21a1f1;
+}
