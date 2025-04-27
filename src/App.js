@@ -4,13 +4,19 @@ import Die from "./components/Die";
 
 export default function App (){
 
-    const [dice,setDice]= React.useState(generateAllNewDice().map(die=>({value:die, isHeld:false})))
+    const [dice,setDice]= React.useState(generateAllNewDice())
     const [gameFinish,setGameFinish]=React.useState(false)
 
     function generateAllNewDice(){
-        return Array.from({ length: 10 }, (_, index) => (
-            Math.ceil(Math.random()*6)
-        ));
+        return Array.from({ length: 10 }, ()=> generateNewDie()
+        );
+    }
+    function generateNewDie(){
+        return ({
+            value:Math.ceil(Math.random()*6),
+            isHeld:false
+        }
+        )
     }
 
     useEffect(()=>{
@@ -22,6 +28,9 @@ export default function App (){
             if (allSameValue && allHeld){
                 setGameFinish(true)
             }
+            else{
+                setGameFinish(false)
+            }
         }
         checkGameOver()
     },[dice]
@@ -31,8 +40,12 @@ export default function App (){
 
     function rollDice(){
         const roll=generateAllNewDice()
-        setDice(dice.map((prevDie,index)=>(prevDie.isHeld===false?{value:roll[index],isHeld:false}:{...prevDie})))
+        if(gameFinish){setDice(roll)}
+        else{
+        setDice(dice.map((prevDie,index)=>(prevDie.isHeld===false?{value:roll[index].value,isHeld:false}:{...prevDie})))}
+        
     }
+
 
     return (
     <main>
@@ -46,7 +59,7 @@ export default function App (){
                 })}
             
         </div>
-        <button className="roll-dice" onClick={rollDice}>Roll Dice</button>
+        <button className="roll-dice" onClick={rollDice}>{gameFinish?"New Game":"Roll Dice"}</button>
         {gameFinish && <div>Game Over</div>}
     </main>
     )
